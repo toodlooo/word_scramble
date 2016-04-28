@@ -9,42 +9,51 @@
     <script>
         "use strict";
 
-        var WORDS     = ["booger", "apple", "hackbright", "mango"];
-        var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
+        // var WORDS     = ["booger", "apple", "hackbright", "mango"];
+        // var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
 
-        var playing = true;
+        var new_word = prompt("Please type in a word to scramble: ");
 
-        while (playing) {
+        console.log(new_word.split(""));
 
-            var random = Math.floor(Math.random() * WORDS.length);    
-            // Grab a random word from the WORDS array
-            console.log(WORDS[random]);
-
-            // Grab the corresponding scrambled word from the SCRAMBLED array
-            console.log(SCRAMBLED[random]);
-
-            // prompt the user to guess the original word when given the scrambled word
-            alert("You're scrambled word is " + SCRAMBLED[random]);
-            var guess = prompt("Guess here!: ").toLowerCase();
-            
-            // If the user guesses wrong, tell them they were wrong and the right word.
-            if (guess !== WORDS[random]) {
-                console.log(guess);
-                alert("WRONG. The right word is " + WORDS[random]);
-            } else if (guess === WORDS[random]) {
-                console.log(guess);
-                alert("CONGRATS, YOU'RE RIGHT!");
-            };
-            
-            // If the user guesses the correct word, congratulate them.
-
-            playing = confirm("Press OK To keep playing or Cancel to quit");
-
-            // What does confirm() return?
-            // What does setting the playing variable do?
+        function shuffle(new_word) {
+            for letter in new_word:
+                letter = 0
         }
 
-        alert("goodbye!");
+        // var playing = true;
+
+        // while (playing) {
+
+        //     var random = Math.floor(Math.random() * WORDS.length);    
+        //     // Grab a random word from the WORDS array
+        //     console.log(WORDS[random]);
+
+        //     // Grab the corresponding scrambled word from the SCRAMBLED array
+        //     console.log(SCRAMBLED[random]);
+
+        //     // prompt the user to guess the original word when given the scrambled word
+        //     alert("You're scrambled word is " + SCRAMBLED[random]);
+        //     var guess = prompt("Guess here!: ").toLowerCase().trim();
+            
+        //     // If the user guesses wrong, tell them they were wrong and the right word.
+        //     if (guess !== WORDS[random]) {
+        //         console.log(guess);
+        //         alert("WRONG. The right word is " + WORDS[random]);
+        //     } else if (guess === WORDS[random]) {
+        //         console.log(guess);
+        //         alert("CONGRATS, YOU'RE RIGHT!");
+        //     };
+            
+        //     // If the user guesses the correct word, congratulate them.
+
+        //     playing = confirm("Press OK To keep playing or Cancel to quit");
+
+        //     // What does confirm() return?
+        //     // What does setting the playing variable do?
+        // }
+
+        // alert("goodbye!");
     </script>
     
 </body>
